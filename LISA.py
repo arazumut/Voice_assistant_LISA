@@ -1,3 +1,5 @@
+# Created By Umut Araz
+
 import speech_recognition as sr
 import pyttsx3
 import datetime
@@ -9,7 +11,6 @@ import random
 import webbrowser 
 from googletrans import Translator
 
-
 engine = pyttsx3.init()
 
 def speak(text):
@@ -19,6 +20,8 @@ def speak(text):
 
 def perform_calculation():
     """Kullanıcıdan iki sayı alıp hangi işlemi yapmak istediğini sorar ve sonucu döner."""
+
+
     
     while True:
         speak("Birinci sayıyı söyleyin.")
@@ -27,19 +30,12 @@ def perform_calculation():
         try:
             num1 = float(num1)
             break
-            
         except ValueError:
             speak("Bu geçerli bir sayı değil. Lütfen tekrar söyleyin.")
     
     while True:
         speak("İkinci sayıyı söyleyin.")
         num2 = get_audio()
-
-
-
-################################# Produced By K.Umut Araz########################################## İnstagram: k.umutarazz 
-
-
 
         try:
             num2 = float(num2)
@@ -96,7 +92,6 @@ def get_time():
     now = datetime.datetime.now()
     current_time = now.strftime("%H:%M:%S")
     speak(f"Saat şu anda {current_time}")
-    speak(f"saat burada yazılı")
 
 def get_weather(city):
     """Şehrin hava durumu bilgisini alır."""
